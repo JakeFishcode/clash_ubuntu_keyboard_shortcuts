@@ -1,5 +1,5 @@
 #! /bin/bash
-source /home/jk/.bashrc
+source /home/${LOGNAME}/.bashrc
 echo "Using clash......."
 function set_manual(){
     gsettings set org.gnome.system.proxy mode 'manual'
@@ -9,7 +9,7 @@ function set_manual(){
     gsettings set org.gnome.system.proxy.https port 7890
     gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
     gsettings set org.gnome.system.proxy.socks port 7891
-    /home/jk/.clash/clash -d /home/jk/.clash/.
+    /home/${LOGNAME}/.clash/clash -d /home/${LOGNAME}/.clash/.
         #xxxx表示你自己的路径
     return 0;
 }
